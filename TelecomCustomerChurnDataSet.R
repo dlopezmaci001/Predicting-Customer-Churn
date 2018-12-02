@@ -1,16 +1,3 @@
-###################################################################
-##### Group A Assigment ML II - Telecom Customer Churn Data Set 
-#####
-##### daniel.lopez@student.ie.edu
-##### heba.abdellatif@student.ie.edu
-##### fjguerra@student.ie.edu
-##### mvarga@student.ie.edu
-##### riyad.kutabish@student.ie.edu
-#####
-##### Created: 28/10/2018
-###################################################################
-
-
 ##### clean, install and load area ####
 rm(list = ls())
 dev.off()
@@ -64,7 +51,7 @@ library(rpart)
 
 ##### Exploratory Data Analysis #####
 
-d_churn <- read.csv2("C:/Users/Daniel/Desktop/Machine L II/Group Assignment/WA_Fn-UseC_-Telco-Customer-Churn.csv",header = TRUE,sep = ",",na.strings=c("", "NA"))
+d_churn <- read.csv2("YOUR PATH"/WA_Fn-UseC_-Telco-Customer-Churn.csv",header = TRUE,sep = ",",na.strings=c("", "NA"))
 
 # Let's analyse how many empty values there are in the dataset:
 sapply(d_churn, function(x) sum(is.na(x)))
@@ -586,7 +573,7 @@ dim(predmatrix)
 test.error <- with(training_1,apply((predmatrix)^2,2,mean))
 head(test.error)
 
-# Plot test error vs nº of trees
+# Plot test error vs nÂº of trees
 
 plot(n.trees,test.error,pch=19,col="blue",xlab="Number of Trees", ylab="Test Error",main = "Perfomance of Boosting on Test Set")
 
